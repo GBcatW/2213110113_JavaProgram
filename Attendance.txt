@@ -1,4 +1,5 @@
+Date:08-12-65
 StudentID: 2213110113
 Fullname(in Englsih):Nattawut Worraratphaisarn
 AKA:GBcatW
-ClassDetail:String Methods and Defined Method
+ClassDetail:User-Defined Method with String
