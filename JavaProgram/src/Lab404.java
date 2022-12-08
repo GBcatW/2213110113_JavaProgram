@@ -8,9 +8,8 @@ public class Lab404 {
 		String text = scan.nextLine().toLowerCase();
 		text = text.replace(" ","");
 		int x = text.length();
-		int y = x/2-1;
 		boolean isPalindrome = true;
-		for(int i = 0; i<=y;i++) {
+		for(int i = 0; i<x;i++) {
 			if(text.charAt(i) == text.charAt(text.length()-1-i));
 			else
 			{
