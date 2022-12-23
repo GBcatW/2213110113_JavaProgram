@@ -26,7 +26,8 @@ public class Product {
 	public double calculate() {
 		return unit * price;
 	}
-	public void output() {
-		
-	}
+	public void output() 
+    {
+        System.out.println(">> " + getId() + " has " + getUnit() + " units");   
+    }
 }
