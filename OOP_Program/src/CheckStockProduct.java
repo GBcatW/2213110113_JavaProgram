@@ -15,12 +15,27 @@ public class CheckStockProduct {
 			productList[i].setUnit(scan.nextInt());
 			System.out.println();
 		}
+		header("LOW");
+		for(Product LIST : productList) 
+        {
+            if(LIST.getUnit() < 5) LIST.output();
+        }
+        header("NORMAL");
+        for(Product LIST : productList) 
+        {
+            if(LIST.getUnit() >= 5 && LIST.getUnit() <= 50) LIST.output();
+        }
+        header("HIGH");
+        for(Product LIST : productList) 
+        {
+            if(LIST.getUnit() > 50) LIST.output();
+        }
 		
 	}
 	public static void header (String message) {
-		System.out.println("----------------------------------------");
-		System.out.println("List of product in " + "'" + message + "' status.");
-		System.out.println("----------------------------------------");
+		System.out.println("-----------------------------------");
+		System.out.println("List of product in \'" + message + "\' status.");
+		System.out.println("-----------------------------------");
 	}
 
 }
