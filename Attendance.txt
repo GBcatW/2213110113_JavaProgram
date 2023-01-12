@@ -1,5 +1,5 @@
-Date:22-12-65
+Date:12-1-65
 StudentID: 2213110113
 Fullname(in Englsih):Nattawut Worraratphaisarn
 AKA:GBcatW
-ClassDetail:Class and Object, Array of Object
+ClassDetail:GUI
