@@ -1,5 +1,5 @@
-Date:19-1-66
+Date:26-1-66
 StudentID: 2213110113
 Fullname(in English):Nattawut Worraratphaisarn
 AKA:GBcatW
-ClassDetail:Encapsulation
+ClassDetail: Composition and Inheritance
