@@ -1,4 +1,4 @@
-
+import java.time.*;
 public class FictionBook implements Author, Book {
 	private String author_name;
 	private String email;
@@ -21,35 +21,22 @@ public class FictionBook implements Author, Book {
 	}
 	
 	public boolean checkFormatName() {
-		String defaultFormat = getFirstName()+ " " + getLastName();
-		if(author_name.toUpperCase().trim().equals(defaultFormat)) {
-			return true;
-		}
-		else {
-			return false;
-		}
+		return ((!author_name.contains(" ")) ? true : false);
 	}
 	
 	@Override
 	public String getLastName() {
-		int idx = author_name.lastIndexOf(' ');
-		return author_name.substring(idx + 1).toUpperCase();
+		return author_name.split(" ")[1].toUpperCase();
 	}
 	
 	@Override
 	public String getFirstName() {
-		int idx = author_name.lastIndexOf(' ');
-		return author_name.substring(0,idx).toUpperCase();
+		return author_name.split(" ")[0].toUpperCase();
 	}
 	
 	@Override
 	public boolean checkEmail() {
-		if(email.endsWith("@hotmail.com") || email.endsWith("@windowslive.com")) {
-			return true;
-		}
-		else {
-			return false;
-		}
+		return (email.endsWith("@hotmail.com") || email.endsWith("@windowslive.com")) && !(email.contains(" "))? true : false;
 	}
 	
 	@Override
@@ -59,12 +46,12 @@ public class FictionBook implements Author, Book {
 	
 	@Override
 	public int totalPublicYear() {
-		return 2023 - publicYear;
+		return LocalDateTime.now().getYear() - publicYear;
 	}
 	
 	public String toString() {
 		return getTitle() + " write by " + getLastName().charAt(0) 
-				+ "." + getFirstName() + "(" + this.email + ") \nPublished for "
-				+ totalPublicYear()+ "years.";
+				+ "." + getFirstName() + " (" + this.email + ") \nPublished for "
+				+ totalPublicYear()+ " years.";
 	}
 }
