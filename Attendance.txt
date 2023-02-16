@@ -1,5 +1,5 @@
-Date:9-2-66
+Date:16-2-66
 StudentID: 2213110113
 Fullname(in English):Nattawut Worraratphaisarn
 AKA:GBcatW
-ClassDetail: File and Exception Handling 
+ClassDetail: Exception + File (W / R)
